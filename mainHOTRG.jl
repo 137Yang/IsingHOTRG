@@ -2,7 +2,6 @@ include("parinput.jl")
 include("doHOTRG.jl")
 include("ncon.jl")
 using JLD2, Plots, LaTeXStrings
-
     gi, btR, btI, N, chi, L = parinput()
     Ng = length(gi);
     Nbr = length(btR);
@@ -18,8 +17,7 @@ using JLD2, Plots, LaTeXStrings
                 Z[i,j] = coarseGrain(g,bt,N,chi,L);
                 @save "F:\\julia\\IsingHOTRG\\figure\\Z.jld2" btR btI Z
             end
-        end
-        
+        end       
     @load "F:\\julia\\IsingHOTRG\\figure\\Z.jld2" btR btI Z
     # gr();
     plot_size = (3500,2625);
