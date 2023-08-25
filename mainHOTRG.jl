@@ -27,3 +27,4 @@ using JLD2, Plots, LaTeXStrings
     ylabel!(L"β_i(π)")
     #save plot as PNG
     savefig("F:\\julia\\IsingHOTRG\\figure\\z.png")
+    # git compare 
